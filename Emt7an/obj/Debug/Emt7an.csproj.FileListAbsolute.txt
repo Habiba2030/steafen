@@ -1,0 +1,11 @@
+C:\Users\IT\Desktop\Emt7an\obj\Debug\Emt7an.csproj.AssemblyReference.cache
+C:\Users\IT\Desktop\Emt7an\obj\Debug\Emt7an.csproj.SuggestedBindingRedirects.cache
+C:\Users\IT\Desktop\Emt7an\obj\Debug\Forget.g.cs
+C:\Users\IT\Desktop\Emt7an\obj\Debug\Login.g.cs
+C:\Users\IT\Desktop\Emt7an\obj\Debug\MainWindow.g.cs
+C:\Users\IT\Desktop\Emt7an\obj\Debug\Profile.g.cs
+C:\Users\IT\Desktop\Emt7an\obj\Debug\SignUp.g.cs
+C:\Users\IT\Desktop\Emt7an\obj\Debug\App.g.cs
+C:\Users\IT\Desktop\Emt7an\obj\Debug\Emt7an_Content.g.cs
+C:\Users\IT\Desktop\Emt7an\obj\Debug\Emt7an_MarkupCompile.cache
+C:\Users\IT\Desktop\Emt7an\obj\Debug\Emt7an_MarkupCompile.lref

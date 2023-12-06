@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMINN">
+    <Key>
+      <PropertyRef Name="ADMIN_ID" />
+    </Key>
+    <Property Name="ADMIN_ID" Type="int" Nullable="false" />
+    <Property Name="ADMIN_USERNAME" Type="varchar" MaxLength="30" />
+    <Property Name="ADMIN_PASS" Type="int" />
+  </EntityType>
+  <EntityType Name="USSER">
+    <Key>
+      <PropertyRef Name="US_ID" />
+    </Key>
+    <Property Name="US_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="US_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="US_PASS" Type="varchar" MaxLength="50" />
+    <Property Name="US_GENDER" Type="varchar" MaxLength="30" />
+    <Property Name="US_AGE" Type="int" />
+    <Property Name="US_PHONENUM" Type="varchar" MaxLength="30" />
+    <Property Name="US_CITY" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="ADMINN" EntityType="Self.ADMINN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USSER" EntityType="Self.USSER" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

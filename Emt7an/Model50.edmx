@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ADMINN">
+          <Key>
+            <PropertyRef Name="ADMIN_ID" />
+          </Key>
+          <Property Name="ADMIN_ID" Type="int" Nullable="false" />
+          <Property Name="ADMIN_USERNAME" Type="varchar" MaxLength="30" />
+          <Property Name="ADMIN_PASS" Type="int" />
+        </EntityType>
+        <EntityType Name="USSER">
+          <Key>
+            <PropertyRef Name="US_ID" />
+          </Key>
+          <Property Name="US_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="US_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="US_PASS" Type="varchar" MaxLength="50" />
+          <Property Name="US_GENDER" Type="varchar" MaxLength="30" />
+          <Property Name="US_AGE" Type="int" />
+          <Property Name="US_PHONENUM" Type="varchar" MaxLength="30" />
+          <Property Name="US_CITY" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="ADMINN" EntityType="Self.ADMINN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USSER" EntityType="Self.USSER" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ADMINN">
+          <Key>
+            <PropertyRef Name="ADMIN_ID" />
+          </Key>
+          <Property Name="ADMIN_ID" Type="Int32" Nullable="false" />
+          <Property Name="ADMIN_USERNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ADMIN_PASS" Type="Int32" />
+        </EntityType>
+        <EntityType Name="USSER">
+          <Key>
+            <PropertyRef Name="US_ID" />
+          </Key>
+          <Property Name="US_ID" Type="Int32" Nullable="false" />
+          <Property Name="US_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="US_PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="US_GENDER" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="US_AGE" Type="Int32" />
+          <Property Name="US_PHONENUM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="US_CITY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="desktop_systemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ADMINNs" EntityType="Self.ADMINN" />
+          <EntitySet Name="USSERs" EntityType="Self.USSER" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="desktop_systemEntities">
+          <EntitySetMapping Name="ADMINNs">
+            <EntityTypeMapping TypeName="Model.ADMINN">
+              <MappingFragment StoreEntitySet="ADMINN">
+                <ScalarProperty Name="ADMIN_ID" ColumnName="ADMIN_ID" />
+                <ScalarProperty Name="ADMIN_USERNAME" ColumnName="ADMIN_USERNAME" />
+                <ScalarProperty Name="ADMIN_PASS" ColumnName="ADMIN_PASS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USSERs">
+            <EntityTypeMapping TypeName="Model.USSER">
+              <MappingFragment StoreEntitySet="USSER">
+                <ScalarProperty Name="US_ID" ColumnName="US_ID" />
+                <ScalarProperty Name="US_NAME" ColumnName="US_NAME" />
+                <ScalarProperty Name="US_PASS" ColumnName="US_PASS" />
+                <ScalarProperty Name="US_GENDER" ColumnName="US_GENDER" />
+                <ScalarProperty Name="US_AGE" ColumnName="US_AGE" />
+                <ScalarProperty Name="US_PHONENUM" ColumnName="US_PHONENUM" />
+                <ScalarProperty Name="US_CITY" ColumnName="US_CITY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

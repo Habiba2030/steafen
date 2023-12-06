@@ -1,0 +1,39 @@
+﻿<Page x:Class="Emt7an.SignUp"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Emt7an"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SignUp">
+
+    <Grid Background="White">
+        <Label Style="{StaticResource lablestyle}" Content="sign up form" Height="NaN" Margin="248,10,248,381" Width="NaN"></Label>
+        <Label Style="{StaticResource lablestyle}" Content="user name" Height="NaN" Margin="10,69,486,322" Width="NaN"></Label>
+        <Label Style="{StaticResource lablestyle}" Content="password" Height="NaN" Margin="10,133,486,258" Width="NaN"></Label>
+        <Label Style="{StaticResource lablestyle}" Content="age" Height="NaN" Margin="10,193,486,198" Width="NaN"></Label>
+        <Label Style="{StaticResource lablestyle}" Content="gender" Height="NaN" Margin="10,257,486,134" Width="NaN"></Label>
+        <Label Style="{StaticResource lablestyle}" Content="phone num" Height="NaN" Margin="10,316,486,75" Width="NaN"></Label>
+        <Label Style="{StaticResource lablestyle}" Content="city" Height="NaN" Margin="10,375,638,16" Width="NaN"></Label>
+        <TextBox x:Name="user" Style="{StaticResource textboxstyle}" Height="NaN" Margin="231,69,248,333" Width="NaN"></TextBox>
+        <TextBox x:Name="pass1" Style="{StaticResource textboxstyle}" Height="NaN" Margin="231,128,248,274" Width="NaN"></TextBox>
+        <TextBox x:Name="age1" Style="{StaticResource textboxstyle}" Height="NaN" Margin="231,193,248,209" Width="NaN"></TextBox>
+        <TextBox x:Name="num" Style="{StaticResource textboxstyle}" Height="NaN" Margin="212,327,267,75" Width="NaN"></TextBox>
+        <ComboBox Margin="212,386,402,26">
+            <ComboBoxItem>cairo</ComboBoxItem>
+            <ComboBoxItem>giza</ComboBoxItem>
+            <ComboBoxItem>aswan</ComboBoxItem>
+            <ComboBoxItem>mansora</ComboBoxItem>
+            <ComboBoxItem>egypt</ComboBoxItem>
+            <ComboBoxItem Margin="0,8,0,0">maadi</ComboBoxItem>
+        </ComboBox>
+        <Button Style="{StaticResource buttonstyle}" Content="signup" Click="Button_Click_1"></Button>
+        <Button Style="{StaticResource buttonstyle}" Content="login" Margin="593,380,10,16" Height="NaN" Width="NaN" Click="Button_Click"></Button>
+        <ComboBox x:Name="combo" HorizontalAlignment="Left" Margin="231,268,0,0" VerticalAlignment="Top" Width="207" Height="38" >
+            <ComboBoxItem >female</ComboBoxItem>
+            <ComboBoxItem >male</ComboBoxItem>
+        </ComboBox>
+
+    </Grid>
+</Page>

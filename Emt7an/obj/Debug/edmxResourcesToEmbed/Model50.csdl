@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ADMINN">
+    <Key>
+      <PropertyRef Name="ADMIN_ID" />
+    </Key>
+    <Property Name="ADMIN_ID" Type="Int32" Nullable="false" />
+    <Property Name="ADMIN_USERNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ADMIN_PASS" Type="Int32" />
+  </EntityType>
+  <EntityType Name="USSER">
+    <Key>
+      <PropertyRef Name="US_ID" />
+    </Key>
+    <Property Name="US_ID" Type="Int32" Nullable="false" />
+    <Property Name="US_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="US_PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="US_GENDER" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="US_AGE" Type="Int32" />
+    <Property Name="US_PHONENUM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="US_CITY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="desktop_systemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADMINNs" EntityType="Self.ADMINN" />
+    <EntitySet Name="USSERs" EntityType="Self.USSER" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,31 @@
+﻿<Page x:Class="Emt7an.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Emt7an"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Login">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="149*"/>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="141*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition Width="433*"/>
+            <ColumnDefinition Width="194*"/>
+        </Grid.ColumnDefinitions>
+        <Label Style="{StaticResource lablestyle}" Content="login form" Height="NaN" Margin="39,10,91,80" Width="NaN" Grid.Column="1"></Label>
+        <Label Style="{StaticResource lablestyle}" Content="username" Height="NaN" Margin="10,94,293,144" Width="NaN" FontSize="25" Grid.ColumnSpan="2" Grid.RowSpan="2"></Label>
+        <Label Style="{StaticResource lablestyle}" Content="password" Height="NaN" Margin="10,17,293,72" Width="NaN" FontSize="25" Grid.ColumnSpan="2" Grid.Row="1"></Label>
+        <TextBox x:Name="user_name" Style="{StaticResource textboxstyle}" Height="NaN" Margin="39,100,73,1" Width="NaN" Grid.Column="1"></TextBox>
+        <TextBox x:Name="pass" Style="{StaticResource textboxstyle}" Height="NaN" Margin="39,23,73,77" Width="NaN" Grid.Column="1" Grid.Row="1"></TextBox>
+        <Button Style="{StaticResource buttonstyle}" Content="login" Margin="77,103,159,2" Height="NaN" Width="NaN" Click="Button_Click" Grid.Column="1" Grid.Row="1"/>
+        <Button Style="{StaticResource buttonstyle}" Content="forget pass" Margin="77,32,159,67" Height="NaN" Width="NaN" Grid.Column="1" Grid.Row="2"></Button>
+        <Button Style="{StaticResource buttonstyle}" Content="sign up" Margin="420,89,10,10" Height="NaN" Width="NaN" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2"></Button>
+    </Grid>
+</Page>
